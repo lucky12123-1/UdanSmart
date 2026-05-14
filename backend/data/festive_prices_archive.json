@@ -1,0 +1,1852 @@
+{
+  "DEL-BOM": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 6000,
+      "peak_price_inr": 7700
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 5300,
+      "peak_price_inr": 6850
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 5100,
+      "peak_price_inr": 6700
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 5350,
+      "peak_price_inr": 7100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 5300,
+      "peak_price_inr": 7100
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 5600,
+      "peak_price_inr": 7600
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 5200,
+      "peak_price_inr": 7100
+    }
+  },
+  "BOM-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 8600
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 5900,
+      "peak_price_inr": 7650
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 5650,
+      "peak_price_inr": 7400
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 5900,
+      "peak_price_inr": 7800
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 5850,
+      "peak_price_inr": 7850
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 6150,
+      "peak_price_inr": 8350
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 5700,
+      "peak_price_inr": 7800
+    }
+  },
+  "DEL-BLR": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 7400,
+      "peak_price_inr": 9450
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 6500,
+      "peak_price_inr": 8400
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 6200,
+      "peak_price_inr": 8100
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 6450,
+      "peak_price_inr": 8550
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 6400,
+      "peak_price_inr": 8600
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 9100
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 6200,
+      "peak_price_inr": 8500
+    }
+  },
+  "BLR-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 8100,
+      "peak_price_inr": 10350
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 7100,
+      "peak_price_inr": 9200
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 6750,
+      "peak_price_inr": 8850
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 7050,
+      "peak_price_inr": 9350
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 6950,
+      "peak_price_inr": 9300
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 7250,
+      "peak_price_inr": 9800
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 9200
+    }
+  },
+  "DEL-MAA": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 8800,
+      "peak_price_inr": 11250
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 7700,
+      "peak_price_inr": 9950
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 7300,
+      "peak_price_inr": 9550
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 7600,
+      "peak_price_inr": 10050
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 7500,
+      "peak_price_inr": 10050
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 7850,
+      "peak_price_inr": 10650
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 7250,
+      "peak_price_inr": 9950
+    }
+  },
+  "MAA-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 9500,
+      "peak_price_inr": 12150
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 8300,
+      "peak_price_inr": 10750
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 7900,
+      "peak_price_inr": 10350
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 8200,
+      "peak_price_inr": 10850
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 8050,
+      "peak_price_inr": 10800
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 8400,
+      "peak_price_inr": 11400
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 7750,
+      "peak_price_inr": 10600
+    }
+  },
+  "DEL-HYD": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 10150,
+      "peak_price_inr": 13000
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 8900,
+      "peak_price_inr": 11550
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 8400,
+      "peak_price_inr": 11000
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 8750,
+      "peak_price_inr": 11600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 8550,
+      "peak_price_inr": 11450
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 8950,
+      "peak_price_inr": 12150
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 8250,
+      "peak_price_inr": 11300
+    }
+  },
+  "HYD-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 10850,
+      "peak_price_inr": 13900
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 9500,
+      "peak_price_inr": 12300
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 9000,
+      "peak_price_inr": 11800
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 9300,
+      "peak_price_inr": 12300
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 9100,
+      "peak_price_inr": 12200
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 9500,
+      "peak_price_inr": 12850
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 8750,
+      "peak_price_inr": 12000
+    }
+  },
+  "DEL-CCU": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 11550,
+      "peak_price_inr": 14800
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13100
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 9550,
+      "peak_price_inr": 12500
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 9900,
+      "peak_price_inr": 13100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 9650,
+      "peak_price_inr": 12950
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13700
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 9250,
+      "peak_price_inr": 12650
+    }
+  },
+  "CCU-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 12250,
+      "peak_price_inr": 15700
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 10700,
+      "peak_price_inr": 13850
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13250
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 10450,
+      "peak_price_inr": 13850
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 10200,
+      "peak_price_inr": 13650
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 10650,
+      "peak_price_inr": 14450
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 9750,
+      "peak_price_inr": 13350
+    }
+  },
+  "BOM-BLR": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 12950,
+      "peak_price_inr": 16600
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 11300,
+      "peak_price_inr": 14650
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 10650,
+      "peak_price_inr": 13950
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 11000,
+      "peak_price_inr": 14600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 10750,
+      "peak_price_inr": 14400
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 11200,
+      "peak_price_inr": 15200
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 10250,
+      "peak_price_inr": 14050
+    }
+  },
+  "BLR-BOM": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 13650,
+      "peak_price_inr": 17450
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 11900,
+      "peak_price_inr": 15400
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 11200,
+      "peak_price_inr": 14650
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 11550,
+      "peak_price_inr": 15300
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 11300,
+      "peak_price_inr": 15150
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 11750,
+      "peak_price_inr": 15900
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 10750,
+      "peak_price_inr": 14750
+    }
+  },
+  "BOM-MAA": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 14300,
+      "peak_price_inr": 18300
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 12450,
+      "peak_price_inr": 16100
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 11750,
+      "peak_price_inr": 15400
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 12150,
+      "peak_price_inr": 16100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 11850,
+      "peak_price_inr": 15900
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 12350,
+      "peak_price_inr": 16750
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 11250,
+      "peak_price_inr": 15400
+    }
+  },
+  "MAA-BOM": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 15050,
+      "peak_price_inr": 19250
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 13100,
+      "peak_price_inr": 16950
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 12300,
+      "peak_price_inr": 16100
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 12700,
+      "peak_price_inr": 16850
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 12400,
+      "peak_price_inr": 16600
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 12900,
+      "peak_price_inr": 17500
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 11750,
+      "peak_price_inr": 16100
+    }
+  },
+  "BOM-HYD": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 15700,
+      "peak_price_inr": 20100
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 13650,
+      "peak_price_inr": 17700
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 12850,
+      "peak_price_inr": 16850
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 13300,
+      "peak_price_inr": 17600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 12950,
+      "peak_price_inr": 17350
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 13450,
+      "peak_price_inr": 18200
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 12250,
+      "peak_price_inr": 16800
+    }
+  },
+  "HYD-BOM": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 6000,
+      "peak_price_inr": 7700
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 5300,
+      "peak_price_inr": 6850
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 5100,
+      "peak_price_inr": 6700
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 5350,
+      "peak_price_inr": 7100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 5300,
+      "peak_price_inr": 7100
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 5600,
+      "peak_price_inr": 7600
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 5200,
+      "peak_price_inr": 7100
+    }
+  },
+  "BOM-CCU": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 8600
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 5900,
+      "peak_price_inr": 7650
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 5650,
+      "peak_price_inr": 7400
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 5900,
+      "peak_price_inr": 7800
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 5850,
+      "peak_price_inr": 7850
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 6150,
+      "peak_price_inr": 8350
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 5700,
+      "peak_price_inr": 7800
+    }
+  },
+  "CCU-BOM": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 7400,
+      "peak_price_inr": 9450
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 6500,
+      "peak_price_inr": 8400
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 6200,
+      "peak_price_inr": 8100
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 6450,
+      "peak_price_inr": 8550
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 6400,
+      "peak_price_inr": 8600
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 9100
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 6200,
+      "peak_price_inr": 8500
+    }
+  },
+  "BLR-MAA": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 8100,
+      "peak_price_inr": 10350
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 7100,
+      "peak_price_inr": 9200
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 6750,
+      "peak_price_inr": 8850
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 7050,
+      "peak_price_inr": 9350
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 6950,
+      "peak_price_inr": 9300
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 7250,
+      "peak_price_inr": 9800
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 9200
+    }
+  },
+  "MAA-BLR": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 8800,
+      "peak_price_inr": 11250
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 7700,
+      "peak_price_inr": 9950
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 7300,
+      "peak_price_inr": 9550
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 7600,
+      "peak_price_inr": 10050
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 7500,
+      "peak_price_inr": 10050
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 7850,
+      "peak_price_inr": 10650
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 7250,
+      "peak_price_inr": 9950
+    }
+  },
+  "BLR-HYD": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 9450,
+      "peak_price_inr": 12100
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 8300,
+      "peak_price_inr": 10750
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 7850,
+      "peak_price_inr": 10300
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 8150,
+      "peak_price_inr": 10800
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 8000,
+      "peak_price_inr": 10700
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 8400,
+      "peak_price_inr": 11400
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 7750,
+      "peak_price_inr": 10600
+    }
+  },
+  "HYD-BLR": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 10150,
+      "peak_price_inr": 13000
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 8900,
+      "peak_price_inr": 11550
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 8400,
+      "peak_price_inr": 11000
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 8750,
+      "peak_price_inr": 11600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 8600,
+      "peak_price_inr": 11500
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 8950,
+      "peak_price_inr": 12150
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 8250,
+      "peak_price_inr": 11300
+    }
+  },
+  "BLR-CCU": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 10850,
+      "peak_price_inr": 13900
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 9500,
+      "peak_price_inr": 12300
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 8950,
+      "peak_price_inr": 11700
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 9300,
+      "peak_price_inr": 12300
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 9100,
+      "peak_price_inr": 12200
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 9500,
+      "peak_price_inr": 12850
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 8750,
+      "peak_price_inr": 12000
+    }
+  },
+  "CCU-BLR": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 11550,
+      "peak_price_inr": 14800
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13100
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 9550,
+      "peak_price_inr": 12500
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 9850,
+      "peak_price_inr": 13050
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 9650,
+      "peak_price_inr": 12950
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13700
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 9250,
+      "peak_price_inr": 12650
+    }
+  },
+  "MAA-HYD": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 12250,
+      "peak_price_inr": 15700
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 10700,
+      "peak_price_inr": 13850
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13250
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 10450,
+      "peak_price_inr": 13850
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 10200,
+      "peak_price_inr": 13650
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 10650,
+      "peak_price_inr": 14450
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 9750,
+      "peak_price_inr": 13350
+    }
+  },
+  "HYD-MAA": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 12950,
+      "peak_price_inr": 16600
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 11300,
+      "peak_price_inr": 14650
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 10650,
+      "peak_price_inr": 13950
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 11000,
+      "peak_price_inr": 14600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 10750,
+      "peak_price_inr": 14400
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 11200,
+      "peak_price_inr": 15200
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 10250,
+      "peak_price_inr": 14050
+    }
+  },
+  "MAA-CCU": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 13650,
+      "peak_price_inr": 17450
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 11900,
+      "peak_price_inr": 15400
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 11200,
+      "peak_price_inr": 14650
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 11600,
+      "peak_price_inr": 15350
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 11300,
+      "peak_price_inr": 15150
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 11800,
+      "peak_price_inr": 16000
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 10750,
+      "peak_price_inr": 14750
+    }
+  },
+  "CCU-MAA": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 14300,
+      "peak_price_inr": 18300
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 12450,
+      "peak_price_inr": 16100
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 11750,
+      "peak_price_inr": 15400
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 12150,
+      "peak_price_inr": 16100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 11850,
+      "peak_price_inr": 15900
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 12350,
+      "peak_price_inr": 16750
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 11250,
+      "peak_price_inr": 15400
+    }
+  },
+  "HYD-CCU": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 15000,
+      "peak_price_inr": 19200
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 13050,
+      "peak_price_inr": 16900
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 12300,
+      "peak_price_inr": 16100
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 12700,
+      "peak_price_inr": 16850
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 12400,
+      "peak_price_inr": 16600
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 12900,
+      "peak_price_inr": 17500
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 11750,
+      "peak_price_inr": 16100
+    }
+  },
+  "CCU-HYD": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 15700,
+      "peak_price_inr": 20100
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 13650,
+      "peak_price_inr": 17700
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 12850,
+      "peak_price_inr": 16850
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 13300,
+      "peak_price_inr": 17600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 12950,
+      "peak_price_inr": 17350
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 13450,
+      "peak_price_inr": 18200
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 12250,
+      "peak_price_inr": 16800
+    }
+  },
+  "DEL-GOI": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 6000,
+      "peak_price_inr": 7700
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 5300,
+      "peak_price_inr": 6850
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 5100,
+      "peak_price_inr": 6700
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 5350,
+      "peak_price_inr": 7100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 5300,
+      "peak_price_inr": 7100
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 5600,
+      "peak_price_inr": 7600
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 5200,
+      "peak_price_inr": 7100
+    }
+  },
+  "GOI-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 8600
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 5900,
+      "peak_price_inr": 7650
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 5650,
+      "peak_price_inr": 7400
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 5900,
+      "peak_price_inr": 7800
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 5850,
+      "peak_price_inr": 7850
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 6150,
+      "peak_price_inr": 8350
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 5700,
+      "peak_price_inr": 7800
+    }
+  },
+  "DEL-COK": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 7400,
+      "peak_price_inr": 9450
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 6500,
+      "peak_price_inr": 8400
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 6200,
+      "peak_price_inr": 8100
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 6450,
+      "peak_price_inr": 8550
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 6400,
+      "peak_price_inr": 8600
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 9100
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 6200,
+      "peak_price_inr": 8500
+    }
+  },
+  "COK-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 8100,
+      "peak_price_inr": 10350
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 7100,
+      "peak_price_inr": 9200
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 6750,
+      "peak_price_inr": 8850
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 7050,
+      "peak_price_inr": 9350
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 6950,
+      "peak_price_inr": 9300
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 7250,
+      "peak_price_inr": 9800
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 9200
+    }
+  },
+  "DEL-GAU": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 8800,
+      "peak_price_inr": 11250
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 7700,
+      "peak_price_inr": 9950
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 7300,
+      "peak_price_inr": 9550
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 7600,
+      "peak_price_inr": 10050
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 7500,
+      "peak_price_inr": 10050
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 7850,
+      "peak_price_inr": 10650
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 7250,
+      "peak_price_inr": 9950
+    }
+  },
+  "GAU-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 9500,
+      "peak_price_inr": 12150
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 8300,
+      "peak_price_inr": 10750
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 7850,
+      "peak_price_inr": 10300
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 8200,
+      "peak_price_inr": 10850
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 8050,
+      "peak_price_inr": 10800
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 8400,
+      "peak_price_inr": 11400
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 7750,
+      "peak_price_inr": 10600
+    }
+  },
+  "DEL-JAI": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 10150,
+      "peak_price_inr": 13000
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 8900,
+      "peak_price_inr": 11550
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 8400,
+      "peak_price_inr": 11000
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 8750,
+      "peak_price_inr": 11600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 8550,
+      "peak_price_inr": 11450
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 8950,
+      "peak_price_inr": 12150
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 8250,
+      "peak_price_inr": 11300
+    }
+  },
+  "JAI-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 10850,
+      "peak_price_inr": 13900
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 9500,
+      "peak_price_inr": 12300
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 9000,
+      "peak_price_inr": 11800
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 9300,
+      "peak_price_inr": 12300
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 9100,
+      "peak_price_inr": 12200
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 9500,
+      "peak_price_inr": 12850
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 8750,
+      "peak_price_inr": 12000
+    }
+  },
+  "DEL-AMD": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 11550,
+      "peak_price_inr": 14800
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13100
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 9550,
+      "peak_price_inr": 12500
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 9900,
+      "peak_price_inr": 13100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 9650,
+      "peak_price_inr": 12950
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13700
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 9250,
+      "peak_price_inr": 12650
+    }
+  },
+  "AMD-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 12250,
+      "peak_price_inr": 15700
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 10700,
+      "peak_price_inr": 13850
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 10100,
+      "peak_price_inr": 13250
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 10450,
+      "peak_price_inr": 13850
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 10200,
+      "peak_price_inr": 13650
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 10650,
+      "peak_price_inr": 14450
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 9750,
+      "peak_price_inr": 13350
+    }
+  },
+  "DEL-LKO": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 12950,
+      "peak_price_inr": 16600
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 11300,
+      "peak_price_inr": 14650
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 10650,
+      "peak_price_inr": 13950
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 11000,
+      "peak_price_inr": 14600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 10750,
+      "peak_price_inr": 14400
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 11200,
+      "peak_price_inr": 15200
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 10250,
+      "peak_price_inr": 14050
+    }
+  },
+  "LKO-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 13650,
+      "peak_price_inr": 17450
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 11900,
+      "peak_price_inr": 15400
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 11200,
+      "peak_price_inr": 14650
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 11600,
+      "peak_price_inr": 15350
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 11300,
+      "peak_price_inr": 15150
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 11800,
+      "peak_price_inr": 16000
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 10750,
+      "peak_price_inr": 14750
+    }
+  },
+  "DEL-VNS": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 14300,
+      "peak_price_inr": 18300
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 12450,
+      "peak_price_inr": 16100
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 11750,
+      "peak_price_inr": 15400
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 12150,
+      "peak_price_inr": 16100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 11850,
+      "peak_price_inr": 15900
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 12350,
+      "peak_price_inr": 16750
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 11250,
+      "peak_price_inr": 15400
+    }
+  },
+  "VNS-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 15050,
+      "peak_price_inr": 19250
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 13100,
+      "peak_price_inr": 16950
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 12300,
+      "peak_price_inr": 16100
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 12750,
+      "peak_price_inr": 16900
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 12400,
+      "peak_price_inr": 16600
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 12900,
+      "peak_price_inr": 17500
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 10900,
+      "peak_price_inr": 14950
+    }
+  },
+  "DEL-ATQ": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 15700,
+      "peak_price_inr": 20100
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 13650,
+      "peak_price_inr": 17700
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 12850,
+      "peak_price_inr": 16850
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 13300,
+      "peak_price_inr": 17600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 12950,
+      "peak_price_inr": 17350
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 13450,
+      "peak_price_inr": 18200
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 12250,
+      "peak_price_inr": 16800
+    }
+  },
+  "ATQ-DEL": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 6000,
+      "peak_price_inr": 7700
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 5300,
+      "peak_price_inr": 6850
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 5100,
+      "peak_price_inr": 6700
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 5350,
+      "peak_price_inr": 7100
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 5300,
+      "peak_price_inr": 7100
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 5550,
+      "peak_price_inr": 7500
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 5200,
+      "peak_price_inr": 7100
+    }
+  },
+  "BOM-GOI": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 8600
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 5900,
+      "peak_price_inr": 7650
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 5650,
+      "peak_price_inr": 7400
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 5900,
+      "peak_price_inr": 7800
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 5850,
+      "peak_price_inr": 7850
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 6150,
+      "peak_price_inr": 8350
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 5700,
+      "peak_price_inr": 7800
+    }
+  },
+  "GOI-BOM": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 7400,
+      "peak_price_inr": 9450
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 6500,
+      "peak_price_inr": 8400
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 6200,
+      "peak_price_inr": 8100
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 6500,
+      "peak_price_inr": 8600
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 6400,
+      "peak_price_inr": 8600
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 9100
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 6200,
+      "peak_price_inr": 8500
+    }
+  },
+  "BOM-COK": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 8100,
+      "peak_price_inr": 10350
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 7100,
+      "peak_price_inr": 9200
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 6750,
+      "peak_price_inr": 8850
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 7050,
+      "peak_price_inr": 9350
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 6950,
+      "peak_price_inr": 9300
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 7250,
+      "peak_price_inr": 9800
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 6700,
+      "peak_price_inr": 9200
+    }
+  },
+  "COK-BOM": {
+    "Diwali_2024": {
+      "date_range": "2024-10-29/2024-11-05",
+      "avg_price_inr": 8800,
+      "peak_price_inr": 11250
+    },
+    "Dussehra_2024": {
+      "date_range": "2024-10-09/2024-10-13",
+      "avg_price_inr": 7700,
+      "peak_price_inr": 9950
+    },
+    "Holi_2024": {
+      "date_range": "2024-03-20/2024-03-26",
+      "avg_price_inr": 7300,
+      "peak_price_inr": 9550
+    },
+    "Eid_ul-Fitr_2024": {
+      "date_range": "2024-04-08/2024-04-13",
+      "avg_price_inr": 7600,
+      "peak_price_inr": 10050
+    },
+    "Christmas_2024": {
+      "date_range": "2024-12-22/2025-01-02",
+      "avg_price_inr": 7500,
+      "peak_price_inr": 10050
+    },
+    "New_Year_2024": {
+      "date_range": "2024-12-29/2025-01-03",
+      "avg_price_inr": 7850,
+      "peak_price_inr": 10650
+    },
+    "Republic_Day_2024": {
+      "date_range": "2024-01-24/2024-01-28",
+      "avg_price_inr": 7250,
+      "peak_price_inr": 9950
+    }
+  }
+}

@@ -1,0 +1,634 @@
+{
+  "IN": [
+    {
+      "date": "2024-01-01",
+      "name": "New Year",
+      "type": "national"
+    },
+    {
+      "date": "2024-01-13",
+      "name": "Lohri",
+      "type": "festival"
+    },
+    {
+      "date": "2024-01-15",
+      "name": "Makar Sankranti / Pongal",
+      "type": "festival"
+    },
+    {
+      "date": "2024-01-26",
+      "name": "Republic Day",
+      "type": "national"
+    },
+    {
+      "date": "2024-02-14",
+      "name": "Vasant Panchami",
+      "type": "festival"
+    },
+    {
+      "date": "2024-03-08",
+      "name": "Maha Shivaratri",
+      "type": "festival"
+    },
+    {
+      "date": "2024-03-25",
+      "name": "Holi",
+      "type": "festival"
+    },
+    {
+      "date": "2024-03-29",
+      "name": "Good Friday",
+      "type": "festival"
+    },
+    {
+      "date": "2024-04-11",
+      "name": "Eid ul-Fitr",
+      "type": "festival"
+    },
+    {
+      "date": "2024-04-13",
+      "name": "Baisakhi",
+      "type": "festival"
+    },
+    {
+      "date": "2024-04-21",
+      "name": "Mahavir Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2024-05-23",
+      "name": "Buddha Purnima",
+      "type": "festival"
+    },
+    {
+      "date": "2024-06-17",
+      "name": "Eid ul-Adha",
+      "type": "festival"
+    },
+    {
+      "date": "2024-07-17",
+      "name": "Muharram",
+      "type": "festival"
+    },
+    {
+      "date": "2024-08-15",
+      "name": "Independence Day",
+      "type": "national"
+    },
+    {
+      "date": "2024-08-19",
+      "name": "Raksha Bandhan",
+      "type": "festival"
+    },
+    {
+      "date": "2024-08-26",
+      "name": "Janmashtami",
+      "type": "festival"
+    },
+    {
+      "date": "2024-09-07",
+      "name": "Ganesh Chaturthi",
+      "type": "festival"
+    },
+    {
+      "date": "2024-09-15",
+      "name": "Onam",
+      "type": "festival"
+    },
+    {
+      "date": "2024-09-16",
+      "name": "Milad-un-Nabi",
+      "type": "festival"
+    },
+    {
+      "date": "2024-10-03",
+      "name": "Navratri begins",
+      "type": "festival"
+    },
+    {
+      "date": "2024-10-09",
+      "name": "Durga Puja begins",
+      "type": "festival"
+    },
+    {
+      "date": "2024-10-11",
+      "name": "Maha Ashtami",
+      "type": "festival"
+    },
+    {
+      "date": "2024-10-12",
+      "name": "Dussehra",
+      "type": "festival"
+    },
+    {
+      "date": "2024-10-02",
+      "name": "Gandhi Jayanti",
+      "type": "national"
+    },
+    {
+      "date": "2024-10-20",
+      "name": "Karwa Chauth",
+      "type": "festival"
+    },
+    {
+      "date": "2024-10-29",
+      "name": "Dhanteras",
+      "type": "festival"
+    },
+    {
+      "date": "2024-11-01",
+      "name": "Diwali",
+      "type": "festival"
+    },
+    {
+      "date": "2024-11-02",
+      "name": "Govardhan Puja",
+      "type": "festival"
+    },
+    {
+      "date": "2024-11-03",
+      "name": "Bhai Dooj",
+      "type": "festival"
+    },
+    {
+      "date": "2024-11-15",
+      "name": "Guru Nanak Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2024-12-25",
+      "name": "Christmas",
+      "type": "national"
+    },
+    {
+      "date": "2024-12-31",
+      "name": "New Year Eve",
+      "type": "national"
+    },
+    {
+      "date": "2024-04-14",
+      "name": "Ambedkar Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2024-04-17",
+      "name": "Rama Navami",
+      "type": "festival"
+    },
+    {
+      "date": "2024-05-10",
+      "name": "Akshaya Tritiya",
+      "type": "festival"
+    },
+    {
+      "date": "2024-11-07",
+      "name": "Chhath Puja",
+      "type": "festival"
+    },
+    {
+      "date": "2024-04-14",
+      "name": "Bihu",
+      "type": "festival"
+    },
+    {
+      "date": "2024-04-09",
+      "name": "Ugadi / Gudi Padwa",
+      "type": "festival"
+    },
+    {
+      "date": "2024-04-14",
+      "name": "Vishu",
+      "type": "festival"
+    },
+    {
+      "date": "2024-03-31",
+      "name": "Easter",
+      "type": "festival"
+    },
+    {
+      "date": "2024-01-14",
+      "name": "Kumbh Mela bathing day",
+      "type": "festival"
+    },
+    {
+      "date": "2025-01-01",
+      "name": "New Year",
+      "type": "national"
+    },
+    {
+      "date": "2025-01-13",
+      "name": "Lohri",
+      "type": "festival"
+    },
+    {
+      "date": "2025-01-14",
+      "name": "Makar Sankranti / Pongal",
+      "type": "festival"
+    },
+    {
+      "date": "2025-01-26",
+      "name": "Republic Day",
+      "type": "national"
+    },
+    {
+      "date": "2025-02-02",
+      "name": "Vasant Panchami",
+      "type": "festival"
+    },
+    {
+      "date": "2025-02-26",
+      "name": "Maha Shivaratri",
+      "type": "festival"
+    },
+    {
+      "date": "2025-03-14",
+      "name": "Holi",
+      "type": "festival"
+    },
+    {
+      "date": "2025-04-18",
+      "name": "Good Friday",
+      "type": "festival"
+    },
+    {
+      "date": "2025-03-31",
+      "name": "Eid ul-Fitr",
+      "type": "festival"
+    },
+    {
+      "date": "2025-04-13",
+      "name": "Baisakhi",
+      "type": "festival"
+    },
+    {
+      "date": "2025-04-10",
+      "name": "Mahavir Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2025-05-12",
+      "name": "Buddha Purnima",
+      "type": "festival"
+    },
+    {
+      "date": "2025-06-07",
+      "name": "Eid ul-Adha",
+      "type": "festival"
+    },
+    {
+      "date": "2025-07-06",
+      "name": "Muharram",
+      "type": "festival"
+    },
+    {
+      "date": "2025-08-15",
+      "name": "Independence Day",
+      "type": "national"
+    },
+    {
+      "date": "2025-08-09",
+      "name": "Raksha Bandhan",
+      "type": "festival"
+    },
+    {
+      "date": "2025-08-16",
+      "name": "Janmashtami",
+      "type": "festival"
+    },
+    {
+      "date": "2025-08-27",
+      "name": "Ganesh Chaturthi",
+      "type": "festival"
+    },
+    {
+      "date": "2025-09-05",
+      "name": "Onam",
+      "type": "festival"
+    },
+    {
+      "date": "2025-09-05",
+      "name": "Milad-un-Nabi",
+      "type": "festival"
+    },
+    {
+      "date": "2025-09-22",
+      "name": "Navratri begins",
+      "type": "festival"
+    },
+    {
+      "date": "2025-09-28",
+      "name": "Durga Puja begins",
+      "type": "festival"
+    },
+    {
+      "date": "2025-09-30",
+      "name": "Maha Ashtami",
+      "type": "festival"
+    },
+    {
+      "date": "2025-10-02",
+      "name": "Dussehra",
+      "type": "festival"
+    },
+    {
+      "date": "2025-10-02",
+      "name": "Gandhi Jayanti",
+      "type": "national"
+    },
+    {
+      "date": "2025-10-10",
+      "name": "Karwa Chauth",
+      "type": "festival"
+    },
+    {
+      "date": "2025-10-18",
+      "name": "Dhanteras",
+      "type": "festival"
+    },
+    {
+      "date": "2025-10-20",
+      "name": "Diwali",
+      "type": "festival"
+    },
+    {
+      "date": "2025-10-22",
+      "name": "Govardhan Puja",
+      "type": "festival"
+    },
+    {
+      "date": "2025-10-23",
+      "name": "Bhai Dooj",
+      "type": "festival"
+    },
+    {
+      "date": "2025-11-05",
+      "name": "Guru Nanak Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2025-12-25",
+      "name": "Christmas",
+      "type": "national"
+    },
+    {
+      "date": "2025-12-31",
+      "name": "New Year Eve",
+      "type": "national"
+    },
+    {
+      "date": "2025-04-14",
+      "name": "Ambedkar Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2025-04-06",
+      "name": "Rama Navami",
+      "type": "festival"
+    },
+    {
+      "date": "2025-04-30",
+      "name": "Akshaya Tritiya",
+      "type": "festival"
+    },
+    {
+      "date": "2025-10-28",
+      "name": "Chhath Puja",
+      "type": "festival"
+    },
+    {
+      "date": "2025-04-14",
+      "name": "Bihu",
+      "type": "festival"
+    },
+    {
+      "date": "2025-03-30",
+      "name": "Ugadi / Gudi Padwa",
+      "type": "festival"
+    },
+    {
+      "date": "2025-04-14",
+      "name": "Vishu",
+      "type": "festival"
+    },
+    {
+      "date": "2025-04-20",
+      "name": "Easter",
+      "type": "festival"
+    },
+    {
+      "date": "2025-02-12",
+      "name": "Kumbh Mela bathing day",
+      "type": "festival"
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year",
+      "type": "national"
+    },
+    {
+      "date": "2026-01-13",
+      "name": "Lohri",
+      "type": "festival"
+    },
+    {
+      "date": "2026-01-14",
+      "name": "Makar Sankranti / Pongal",
+      "type": "festival"
+    },
+    {
+      "date": "2026-01-26",
+      "name": "Republic Day",
+      "type": "national"
+    },
+    {
+      "date": "2026-01-23",
+      "name": "Vasant Panchami",
+      "type": "festival"
+    },
+    {
+      "date": "2026-02-15",
+      "name": "Maha Shivaratri",
+      "type": "festival"
+    },
+    {
+      "date": "2026-03-04",
+      "name": "Holi",
+      "type": "festival"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Good Friday",
+      "type": "festival"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Eid ul-Fitr",
+      "type": "festival"
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Baisakhi",
+      "type": "festival"
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Mahavir Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Buddha Purnima",
+      "type": "festival"
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Eid ul-Adha",
+      "type": "festival"
+    },
+    {
+      "date": "2026-06-26",
+      "name": "Muharram",
+      "type": "festival"
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Independence Day",
+      "type": "national"
+    },
+    {
+      "date": "2026-08-28",
+      "name": "Raksha Bandhan",
+      "type": "festival"
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Janmashtami",
+      "type": "festival"
+    },
+    {
+      "date": "2026-09-14",
+      "name": "Ganesh Chaturthi",
+      "type": "festival"
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Onam",
+      "type": "festival"
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Milad-un-Nabi",
+      "type": "festival"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "Navratri begins",
+      "type": "festival"
+    },
+    {
+      "date": "2026-10-17",
+      "name": "Durga Puja begins",
+      "type": "festival"
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Maha Ashtami",
+      "type": "festival"
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Dussehra",
+      "type": "festival"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "Gandhi Jayanti",
+      "type": "national"
+    },
+    {
+      "date": "2026-10-29",
+      "name": "Karwa Chauth",
+      "type": "festival"
+    },
+    {
+      "date": "2026-11-06",
+      "name": "Dhanteras",
+      "type": "festival"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Diwali",
+      "type": "festival"
+    },
+    {
+      "date": "2026-11-09",
+      "name": "Govardhan Puja",
+      "type": "festival"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Bhai Dooj",
+      "type": "festival"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "Guru Nanak Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas",
+      "type": "national"
+    },
+    {
+      "date": "2026-12-31",
+      "name": "New Year Eve",
+      "type": "national"
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Ambedkar Jayanti",
+      "type": "festival"
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Rama Navami",
+      "type": "festival"
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Akshaya Tritiya",
+      "type": "festival"
+    },
+    {
+      "date": "2026-11-15",
+      "name": "Chhath Puja",
+      "type": "festival"
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Bihu",
+      "type": "festival"
+    },
+    {
+      "date": "2026-03-19",
+      "name": "Ugadi / Gudi Padwa",
+      "type": "festival"
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Vishu",
+      "type": "festival"
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Easter",
+      "type": "festival"
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Kumbh Mela bathing day",
+      "type": "festival"
+    }
+  ]
+}

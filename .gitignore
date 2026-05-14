@@ -1,0 +1,27 @@
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+backend/models/*.pkl
+backend/mlruns/
+
+# Env
+.env
+backend/.env
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Data runtime
+redis-data/
