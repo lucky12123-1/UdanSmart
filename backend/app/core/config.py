@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import os
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 
 try:
@@ -65,31 +65,6 @@ class Settings:
     @property
     def resolved_festive_archive_path(self) -> Path:
         """Return the absolute festive archive path."""
-        return ROOT_DIR / self.festive_archive_path
-
-
-settings = Settings()    @property
-    def backend_dir(self) -> Path:
-        """Return the backend root directory."""
-
-        return ROOT_DIR
-
-    @property
-    def data_dir(self) -> Path:
-        """Return the data directory path."""
-
-        return ROOT_DIR / "data"
-
-    @property
-    def resolved_model_path(self) -> Path:
-        """Return the absolute model path."""
-
-        return ROOT_DIR / self.model_path
-
-    @property
-    def resolved_festive_archive_path(self) -> Path:
-        """Return the absolute festive archive path."""
-
         return ROOT_DIR / self.festive_archive_path
 
 
