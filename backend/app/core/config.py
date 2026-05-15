@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from pathlib import Path
+import json
 import os
+from dataclasses import dataclass, field
+from pathlib import Path
 
 try:
     from dotenv import load_dotenv
@@ -35,6 +36,39 @@ class Settings:
     model_version: str = "india-domestic-v1.0"
 
     @property
+    def allowed_origins(self) -> list[str]:
+        """Return CORS allowed origins from environment."""
+        raw = os.getenv(
+            "ALLOWED_ORIGINS",
+            '["http://localhost:5173","http://127.0.0.1:5173"]'
+        )
+        try:
+            return json.loads(raw)
+        except (json.JSONDecodeError, ValueError):
+            return ["http://localhost:5173", "http://127.0.0.1:5173"]
+
+    @property
+    def backend_dir(self) -> Path:
+        """Return the backend root directory."""
+        return ROOT_DIR
+
+    @property
+    def data_dir(self) -> Path:
+        """Return the data directory path."""
+        return ROOT_DIR / "data"
+
+    @property
+    def resolved_model_path(self) -> Path:
+        """Return the absolute model path."""
+        return ROOT_DIR / self.model_path
+
+    @property
+    def resolved_festive_archive_path(self) -> Path:
+        """Return the absolute festive archive path."""
+        return ROOT_DIR / self.festive_archive_path
+
+
+settings = Settings()    @property
     def backend_dir(self) -> Path:
         """Return the backend root directory."""
 
