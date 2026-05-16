@@ -32,7 +32,7 @@ def _trend(origin: str, destination: str, cabin: str, adults: int) -> list[dict]
     today = datetime.now().date()
     route = route_key(origin, destination)
     items = []
-    for idx in range(60):
+    for idx in range(90):
         day = today + timedelta(days=idx + 1)
         stored = price_store.get_price(route, day.isoformat())
         price = stored if stored is not None else predictor.predict_price(origin, destination, day, cabin, adults)
@@ -122,7 +122,7 @@ def predict(request: PredictionRequest) -> PredictionResponse:
         route_average_price=average,
         confidence=confidence,
         days=day_models,
-        trend_60_days=_trend(request.origin, request.destination, request.cabin, request.adults),
+        trend_90_days=_trend(request.origin, request.destination, request.cabin, request.adults),
         festive_reference=festive_reference,
         model_version=settings.model_version,
         data_freshness="real_time" if any(day.source == "stored" for day in day_models) else "simulated",

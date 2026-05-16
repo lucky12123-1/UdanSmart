@@ -76,7 +76,7 @@ class PredictionResponse(BaseModel):
     route_average_price: float | None = None
     confidence: float | None = None
     days: list[DayPrediction] = Field(default_factory=list)
-    trend_60_days: list[dict[str, Any]] | None = None
+    trend_90_days: list[dict[str, Any]] | None = None
     festive_reference: list[dict[str, Any]] | None = None
     model_version: str
     data_freshness: str

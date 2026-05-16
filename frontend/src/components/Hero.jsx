@@ -12,9 +12,6 @@ export default function Hero({ onSubmit, loading }) {
         <div className="max-w-4xl animate-slide-up">
           <h1 className="text-4xl font-black leading-tight tracking-normal sm:text-6xl lg:text-7xl">Find the <span className="bg-gradient-to-r from-brand-400 via-saffron to-india-green bg-clip-text text-transparent">Cheapest</span> Day to Fly</h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-xl">AI-powered predictions across India's domestic routes. Save up to 40% on every booking.</p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3 text-xs font-semibold text-slate-300 sm:text-sm">
-            {['82% Accuracy', '82 Indian Airports', 'Updated Daily', 'Free to Use'].map((item) => <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-2">{item}</span>)}
-          </div>
         </div>
         <SearchForm onSubmit={onSubmit} loading={loading} />
       </div>
