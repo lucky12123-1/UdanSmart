@@ -61,12 +61,11 @@ export default function SearchForm({ onSubmit, loading }) {
     <form id="search" onSubmit={handleSubmit} className="glass w-full max-w-[900px] rounded-2xl p-4 shadow-2xl shadow-black/30 sm:p-6">
       <div className="grid gap-4 md:grid-cols-2">
 
-        {/* Fix 2: Origin + Swap + Destination in one relative container */}
-        <div className="relative md:col-span-2 grid md:grid-cols-2 gap-4">
+        {/* Origin | Swap | Destination — dedicated center column for even spacing */}
+        <div className="md:col-span-2 grid gap-4 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-start md:gap-x-5">
           <AirportAutocomplete label="Origin" value={origin} onChange={setOrigin} otherAirport={destination} error={errors.origin} />
 
-          {/* Swap button — centered between the two fields, desktop only */}
-          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-9 z-20 items-center justify-center">
+          <div className="hidden md:flex shrink-0 items-center justify-center self-start pt-7">
             <button
               type="button"
               onClick={swap}

@@ -9,7 +9,6 @@ import joblib
 import mlflow
 import numpy as np
 import pandas as pd
-from lightgbm import LGBMRegressor, early_stopping
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error
 from sklearn.model_selection import train_test_split
 
@@ -58,6 +57,13 @@ def train() -> dict[str, float]:
     y_train = train_df["price"]
     x_test = test_df[FEATURE_COLUMNS]
     y_test = test_df["price"]
+    try:
+        from lightgbm import LGBMRegressor, early_stopping
+    except OSError as exc:
+        raise RuntimeError(
+            "LightGBM needs OpenMP on macOS. Run: brew install libomp"
+        ) from exc
+
     params = {
         "objective": "regression",
         "metric": "mae",

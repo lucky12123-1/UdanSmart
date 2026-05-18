@@ -39,14 +39,14 @@ export default function ResultsDashboard({ data, query }) {
         <BuyWaitCard data={data}/>
         <div className="lg:col-span-2">
           {/* Fix 3: PriceCalendar now shows 7-day-of-week analysis */}
-          <PriceCalendar days={data.days} recommendedDate={data.recommended_date}/>
+          <PriceCalendar weeklyAnalysis={data.weekly_analysis_90d} />
         </div>
         <div className="lg:col-span-3">
           {/* Fix 4+5: 90-day trend, clamped prices, correct Y-axis */}
-          <PriceTrendChart trend={trendData} average={data.route_average_price} festiveAverage={festiveAverage}/>
+          <PriceTrendChart trend={trendData} trendAveragePrice={data.trend_90_day_avg} festiveAverage={festiveAverage} />
         </div>
         <div className="lg:col-span-3">
-          <RouteInsights days={data.days}/>
+          <RouteInsights weeklyAnalysis={data.weekly_analysis_90d} />
         </div>
         <div className="lg:col-span-3">
           {/* Fix 6: passes trendDays for ±3 day nearby context */}

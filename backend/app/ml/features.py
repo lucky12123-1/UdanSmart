@@ -161,6 +161,40 @@ def _build_route_prices() -> dict[str, int]:
 
 ROUTE_BASE_PRICES = _build_route_prices()
 
+# Busiest India domestic routes — daily fetch job covers these first (30 routes).
+TOP_30_ROUTES: tuple[str, ...] = (
+    "DEL-BOM",
+    "DEL-BLR",
+    "BOM-BLR",
+    "DEL-MAA",
+    "DEL-HYD",
+    "BOM-MAA",
+    "BOM-HYD",
+    "BLR-MAA",
+    "BLR-HYD",
+    "DEL-CCU",
+    "BOM-CCU",
+    "DEL-GOI",
+    "DEL-COK",
+    "DEL-JAI",
+    "DEL-AMD",
+    "BOM-GOI",
+    "BOM-COK",
+    "BOM-AMD",
+    "DEL-ATQ",
+    "DEL-LKO",
+    "MAA-HYD",
+    "BLR-COK",
+    "DEL-GAU",
+    "DEL-VNS",
+    "BOM-VNS",
+    "DEL-PAT",
+    "MAA-CCU",
+    "HYD-CCU",
+    "DEL-GAY",
+    "BLR-GOI",
+)
+
 
 def route_key(origin: str, destination: str) -> str:
     """Return normalized route key."""

@@ -17,11 +17,13 @@ router = APIRouter(prefix="/health", tags=["health"])
 def health() -> dict:
     """Return API health metadata."""
 
+    fetch_meta = price_store.get_fetch_metadata()
     return {
         "status": "ok",
         "model_version": settings.model_version,
         "timestamp": datetime.utcnow().isoformat(),
         "airports_loaded": len(load_airports()),
         "price_store_entries": price_store.count_entries(),
-        "last_price_fetch": None,
+        "last_price_fetch": fetch_meta,
+        "fetch_schedule": "00:30 IST daily — top 30 routes, alternating 45-day batches (90-day window)",
     }

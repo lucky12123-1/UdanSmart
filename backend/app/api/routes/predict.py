@@ -14,7 +14,13 @@ from app.core.cache import get_redis
 from app.core.config import settings
 from app.ml.features import get_base_price, load_airports, route_key
 from app.ml.predictor import predictor
-from app.schemas.prediction import DayPrediction, PredictionRequest, PredictionResponse
+from app.schemas.prediction import (
+    DayPrediction,
+    PredictionRequest,
+    PredictionResponse,
+    WeeklyAnalysis90d,
+    WeekdayAnalysis,
+)
 from app.services.calendar_service import generate_calendar_data, price_label
 from app.services.festive_archive import festive_archive
 from app.services.price_store import price_store
@@ -22,10 +28,77 @@ from app.services.price_store import price_store
 router = APIRouter(prefix="/predict", tags=["prediction"])
 response_adapter = TypeAdapter(PredictionResponse)
 
+DAY_NAMES = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+]
+
 
 def _cache_key(payload: PredictionRequest) -> str:
     raw = payload.model_dump_json()
     return "cache:predict:" + hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+def _weekly_analysis_90d(origin: str, destination: str, cabin: str, adults: int) -> WeeklyAnalysis90d:
+    """Aggregate the last 90 days of route fares by weekday (Sun=0 … Sat=6)."""
+
+    today = datetime.now().date()
+    route = route_key(origin, destination)
+    buckets: dict[int, list[float]] = {index: [] for index in range(7)}
+
+    for offset in range(1, 91):
+        day = today - timedelta(days=offset)
+        stored = price_store.get_price(route, day.isoformat())
+        price = stored if stored is not None else predictor.predict_price(origin, destination, day, cabin, adults)
+        js_dow = (day.weekday() + 1) % 7
+        buckets[js_dow].append(price)
+
+    entries: list[dict] = []
+    for dow in range(7):
+        prices = buckets[dow]
+        if not prices:
+            continue
+        entries.append(
+            {
+                "dow": dow,
+                "day_name": DAY_NAMES[dow],
+                "avg_price": round(float(mean(prices)), 2),
+                "sample_count": len(prices),
+            }
+        )
+
+    if not entries:
+        return WeeklyAnalysis90d()
+
+    route_avg = float(mean(price for prices in buckets.values() for price in prices))
+    best = min(entries, key=lambda item: item["avg_price"])
+    priciest_price = max(item["avg_price"] for item in entries)
+    weekday_models = [
+        WeekdayAnalysis(
+            dow=item["dow"],
+            day_name=item["day_name"],
+            avg_price=item["avg_price"],
+            sample_count=item["sample_count"],
+            pct_vs_route_avg=round((item["avg_price"] - route_avg) / route_avg * 100) if route_avg else 0,
+            is_cheapest=item["dow"] == best["dow"],
+            is_priciest=item["avg_price"] == priciest_price,
+        )
+        for item in entries
+    ]
+    weekday_models.sort(key=lambda item: item.dow)
+
+    return WeeklyAnalysis90d(
+        days=weekday_models,
+        best_day_of_week=best["day_name"],
+        best_dow=best["dow"],
+        route_avg=round(route_avg, 2),
+        analysis_period_days=90,
+    )
 
 
 def _trend(origin: str, destination: str, cabin: str, adults: int) -> list[dict]:
@@ -105,10 +178,20 @@ def predict(request: PredictionRequest) -> PredictionResponse:
     prices = [day.price for day in day_models]
     average = float(mean(prices))
     best = min(day_models, key=lambda item: item.price)
+    weekly_analysis = _weekly_analysis_90d(
+        request.origin, request.destination, request.cabin, request.adults
+    )
     signal, reasoning, confidence = _buy_wait_signal(best.date, best.price, average, request, any(day.is_festive_period for day in day_models))
+    if weekly_analysis.best_day_of_week:
+        reasoning = (
+            f"Over the last 90 days, {weekly_analysis.best_day_of_week} has been the cheapest day to fly "
+            f"{origin_city} → {destination_city}. {reasoning}"
+        )
     festive_reference = festive_archive.get_upcoming_festive_reference(
         route, request.travel_date_start.isoformat(), request.travel_date_end.isoformat()
     )
+    trend_90_days = _trend(request.origin, request.destination, request.cabin, request.adults)
+    trend_90_day_avg = float(mean(item["price"] for item in trend_90_days)) if trend_90_days else None
     response = PredictionResponse(
         has_flights=True,
         origin=request.origin,
@@ -122,7 +205,10 @@ def predict(request: PredictionRequest) -> PredictionResponse:
         route_average_price=average,
         confidence=confidence,
         days=day_models,
-        trend_90_days=_trend(request.origin, request.destination, request.cabin, request.adults),
+        trend_90_days=trend_90_days,
+        trend_90_day_avg=trend_90_day_avg,
+        weekly_analysis_90d=weekly_analysis,
+        best_day_of_week=weekly_analysis.best_day_of_week,
         festive_reference=festive_reference,
         model_version=settings.model_version,
         data_freshness="real_time" if any(day.source == "stored" for day in day_models) else "simulated",

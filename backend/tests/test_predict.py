@@ -36,13 +36,23 @@ def test_predict_valid_route_returns_200() -> None:
     assert data["has_flights"] is True
     assert data["predicted_price"] > 0
     assert data["days"]
+    assert data["best_day_of_week"]
+    assert len(data["weekly_analysis_90d"]["days"]) == 7
 
 
 def test_response_has_required_fields() -> None:
     """Prediction response includes dashboard fields."""
 
     data = client.post("/api/predict/", json=future_payload()).json()
-    for key in ["has_flights", "trend_60_days", "festive_reference", "model_version", "data_freshness"]:
+    for key in [
+        "has_flights",
+        "trend_90_days",
+        "weekly_analysis_90d",
+        "best_day_of_week",
+        "festive_reference",
+        "model_version",
+        "data_freshness",
+    ]:
         assert key in data
 
 

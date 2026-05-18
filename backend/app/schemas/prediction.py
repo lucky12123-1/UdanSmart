@@ -46,6 +46,28 @@ class PredictionRequest(BaseModel):
         return self
 
 
+class WeekdayAnalysis(BaseModel):
+    """Aggregated fare pattern for one weekday over the analysis window."""
+
+    dow: int
+    day_name: str
+    avg_price: float
+    sample_count: int
+    pct_vs_route_avg: int = 0
+    is_cheapest: bool = False
+    is_priciest: bool = False
+
+
+class WeeklyAnalysis90d(BaseModel):
+    """Day-of-week intelligence derived from the last 90 days on a route."""
+
+    days: list[WeekdayAnalysis] = Field(default_factory=list)
+    best_day_of_week: str | None = None
+    best_dow: int | None = None
+    route_avg: float | None = None
+    analysis_period_days: int = 90
+
+
 class DayPrediction(BaseModel):
     """Prediction details for one calendar day."""
 
@@ -77,6 +99,9 @@ class PredictionResponse(BaseModel):
     confidence: float | None = None
     days: list[DayPrediction] = Field(default_factory=list)
     trend_90_days: list[dict[str, Any]] | None = None
+    trend_90_day_avg: float | None = None
+    weekly_analysis_90d: WeeklyAnalysis90d | None = None
+    best_day_of_week: str | None = None
     festive_reference: list[dict[str, Any]] | None = None
     model_version: str
     data_freshness: str

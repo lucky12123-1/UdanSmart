@@ -9,7 +9,15 @@ const tone = {
   festive_peak: 'bg-saffron/10 text-saffron',
 };
 
-// Fix 6: get ±3 days around a given date from the full 90-day trend data
+function dateKey(value) {
+  if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}/.test(value)) return value.slice(0, 10);
+  const d = new Date(value);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
 function getNearbyDays(days, centerDate, windowDays = 3) {
   if (!centerDate || !days?.length) return [];
   const center = new Date(centerDate).getTime();
@@ -20,6 +28,24 @@ function getNearbyDays(days, centerDate, windowDays = 3) {
       return Math.abs(t - center) <= msWindow;
     })
     .sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+/** Prefer travel-range fares; fill gaps from 90-day trend so labels stay consistent. */
+function buildNearbyDays(days, trendDays, centerDate, windowDays = 3) {
+  const fromTrend = getNearbyDays(trendDays, centerDate, windowDays);
+  const fromDays = getNearbyDays(days, centerDate, windowDays);
+  if (!fromDays.length) return fromTrend;
+  if (!fromTrend.length) return fromDays;
+
+  const merged = new Map();
+  for (const day of fromTrend) merged.set(dateKey(day.date), day);
+  for (const day of fromDays) merged.set(dateKey(day.date), day);
+  return [...merged.values()].sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+function cheapestDay(dayList) {
+  if (!dayList?.length) return null;
+  return dayList.reduce((best, day) => (day.price < best.price ? day : best));
 }
 
 export default function PriceTable({ days = [], trendDays = [], recommendedDate, onBook }) {
@@ -36,8 +62,12 @@ export default function PriceTable({ days = [], trendDays = [], recommendedDate,
   const visible = sorted.slice(page * pageSize, page * pageSize + pageSize);
   const avg = days.length ? days.reduce((sum, item) => sum + item.price, 0) / days.length : 0;
 
-  // Fix 6: nearby days from trend (90-day pool) around the recommended date
-  const nearbyDays = useMemo(() => getNearbyDays(trendDays?.length ? trendDays : days, recommendedDate, 3), [trendDays, days, recommendedDate]);
+  const nearbyDays = useMemo(
+    () => buildNearbyDays(days, trendDays, recommendedDate, 3),
+    [days, trendDays, recommendedDate],
+  );
+  const bestNearby = useMemo(() => cheapestDay(nearbyDays), [nearbyDays]);
+  const bestNearbyDate = bestNearby?.date ?? recommendedDate;
   const nearbyAvg = nearbyDays.length ? nearbyDays.reduce((s, d) => s + d.price, 0) / nearbyDays.length : avg;
 
   function header(key, label) {
@@ -57,7 +87,12 @@ export default function PriceTable({ days = [], trendDays = [], recommendedDate,
       {nearbyDays.length > 0 && (
         <article className="glass rounded-2xl p-6">
           <h3 className="text-xl font-black text-white">📅 Prices Around Your Best Date</h3>
-          <p className="mt-1 mb-5 text-sm text-slate-400">Real-time fare comparison — last 3 & next 3 days around <span className="font-bold text-brand-400">{formatDate(recommendedDate, { weekday: 'long', day: '2-digit', month: 'short' })}</span></p>
+          <p className="mt-1 mb-5 text-sm text-slate-400">
+            ±3 days around your search — cheapest fare:{' '}
+            <span className="font-bold text-success">
+              {formatDate(bestNearbyDate, { weekday: 'long', day: '2-digit', month: 'short' })}
+            </span>
+          </p>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
@@ -73,14 +108,20 @@ export default function PriceTable({ days = [], trendDays = [], recommendedDate,
               </thead>
               <tbody>
                 {nearbyDays.map((day) => {
-                  const isCenter = day.date === recommendedDate;
+                  const isCheapest = bestNearby && dateKey(day.date) === dateKey(bestNearby.date);
                   const vsAvg = nearbyAvg ? Math.round((day.price / nearbyAvg - 1) * 100) : 0;
                   const label = day.price_label || (day.price < nearbyAvg * 0.9 ? 'cheap' : day.price > nearbyAvg * 1.1 ? 'expensive' : 'moderate');
                   return (
-                    <tr key={day.date} className={clsx('border-b border-white/5 transition hover:bg-white/5', isCenter && 'bg-brand-500/10 ring-1 ring-brand-500/30')}>
+                    <tr
+                      key={day.date}
+                      className={clsx(
+                        'border-b border-white/5 transition hover:bg-white/5',
+                        isCheapest && 'bg-success/10 ring-1 ring-success/40',
+                      )}
+                    >
                       <td className="py-3 font-bold text-white flex items-center gap-2">
                         {formatDate(day.date, { year: 'numeric' })}
-                        {isCenter && <span className="rounded-full bg-brand-500 px-2 py-0.5 text-[10px] font-black">BEST</span>}
+                        {isCheapest && <span className="rounded-full bg-success px-2 py-0.5 text-[10px] font-black text-white">CHEAPEST</span>}
                       </td>
                       <td className="text-slate-300">{formatDate(day.date, { weekday: 'long' })}</td>
                       <td className="font-black text-white">{formatINR(day.price)}</td>

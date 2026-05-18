@@ -10,6 +10,7 @@ from app.core.cache import get_redis
 from app.core.config import settings
 
 SECONDS_PER_DAY = 86_400
+FETCH_META_KEY = "fetch:meta:last_run"
 
 
 class PriceStore:
@@ -84,6 +85,17 @@ class PriceStore:
         """Return approximate number of stored route-date price entries."""
 
         return len(self.redis.keys("prices:*:*"))
+
+    def save_fetch_metadata(self, payload: dict) -> None:
+        """Store summary of the latest scheduled price fetch."""
+
+        self.redis.set(FETCH_META_KEY, json.dumps(payload), ex=self.ttl_seconds)
+
+    def get_fetch_metadata(self) -> dict | None:
+        """Return summary of the latest scheduled price fetch, if any."""
+
+        raw = self.redis.get(FETCH_META_KEY)
+        return json.loads(raw) if raw else None
 
 
 price_store = PriceStore()
