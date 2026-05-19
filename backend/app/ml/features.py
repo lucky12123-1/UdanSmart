@@ -161,7 +161,7 @@ def _build_route_prices() -> dict[str, int]:
 
 ROUTE_BASE_PRICES = _build_route_prices()
 
-# Busiest India domestic routes — daily fetch job covers these first (30 routes).
+# Busiest India domestic routes — monthly SerpAPI snapshot uses top 25.
 TOP_30_ROUTES: tuple[str, ...] = (
     "DEL-BOM",
     "DEL-BLR",
@@ -194,6 +194,8 @@ TOP_30_ROUTES: tuple[str, ...] = (
     "DEL-GAY",
     "BLR-GOI",
 )
+
+TOP_25_ROUTES: tuple[str, ...] = TOP_30_ROUTES[:25]
 
 
 def route_key(origin: str, destination: str) -> str:

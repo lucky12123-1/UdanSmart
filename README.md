@@ -59,15 +59,39 @@ python scripts/train_model.py
 
 Training generates 80,000 India-domestic synthetic examples, supplements them with stored Redis prices when available, logs metrics to MLflow, and saves the model to `backend/models/lgbm_model.pkl`.
 
-## Daily Price Fetch Setup
+## Monthly Live Price Fetch (210 SerpAPI calls)
 
-The backend schedules the daily fetch at 00:30 IST through APScheduler. For a system cron alternative:
+To stay within a **250 searches/month** SerpAPI plan, the app fetches **one week of live Google Flights prices** for the **top 25 routes** once per month (~**175 calls**). All other travel dates use the **ML predictor**.
 
-```cron
-30 0 * * * cd /path/to/UdanSmart/backend && /path/to/python scripts/fetch_skyscanner_prices.py >> logs/price_fetch.log 2>&1
+- **Schedule:** 00:30 IST on day `1` of each month (configurable)
+- **Live window:** first 7 days of the target month (e.g. June 1–7); mid-month runs skip “today” and target next month
+- **Rest of month:** India-calibrated LightGBM simulation
+
+Prices come from **Google Flights via [SerpAPI](https://serpapi.com/google-flights-api)**.
+
+1. Add your key to `backend/.env`:
+
+```bash
+SERPAPI_API_KEY=your_key_here
+FLIGHT_PRICE_PROVIDER=google_flights
+MONTHLY_FETCH_DAY=1
+MONTHLY_FETCH_WEEK_DAYS=7
+MONTHLY_FETCH_ROUTE_COUNT=25
+MONTHLY_FETCH_ANCHOR_DATE=2026-06-01
 ```
 
-The Skyscanner integration works without keys by attempting the public browse endpoint and falling back to deterministic simulation. A RapidAPI key can be supplied with `SKYSCANNER_RAPIDAPI_KEY`.
+2. Keep Redis + backend running (APScheduler), or run manually once a month:
+
+```bash
+docker compose exec backend python scripts/fetch_flight_prices.py
+```
+
+Manual test:
+
+```bash
+cd backend && source .venv/bin/activate && python scripts/fetch_flight_prices.py
+curl http://localhost:8000/api/health/
+```
 
 ## Project Structure
 
@@ -96,19 +120,25 @@ docker-compose.yml
 | DEBUG | True | Enables debug mode |
 | REDIS_URL | redis://localhost:6379 | Redis connection |
 | MODEL_PATH | models/lgbm_model.pkl | Serialized LightGBM model |
-| SKYSCANNER_RAPIDAPI_KEY | empty | Optional RapidAPI Skyscanner key |
+| SERPAPI_API_KEY | empty | **Required** for daily Google Flights price fetch |
+| FLIGHT_PRICE_PROVIDER | auto | `auto`, `google_flights`, or `skyscanner` |
+| GOOGLE_FLIGHTS_CURRENCY | INR | SerpAPI currency for India fares |
+| SKYSCANNER_RAPIDAPI_KEY | empty | Optional legacy Skyscanner fallback |
 | PRICE_STORE_TTL_DAYS | 90 | Rolling price store TTL |
 | FESTIVE_ARCHIVE_PATH | data/festive_prices_archive.json | Historical festive archive |
 | CACHE_TTL_SECONDS | 21600 | Prediction cache TTL |
-| DAILY_FETCH_CRON | 30 19 * * * | 00:30 IST expressed in UTC cron |
+| MONTHLY_FETCH_DAY | 1 | Day of month for 00:30 IST live week snapshot |
+| MONTHLY_FETCH_WEEK_DAYS | 7 | Days per route per month (25×7=175 calls) |
+| MONTHLY_FETCH_ROUTE_COUNT | 25 | Top India routes to snapshot |
+| MONTHLY_FETCH_ANCHOR_DATE | empty | Force week start (e.g. `2026-06-01`); empty = auto |
 
 ## Adding Indian Airports or Routes
 
 Add the airport to `backend/data/airports_india.json` with IATA, state, lat/lon, and timezone. Then add a base fare in `backend/app/ml/features.py` for every direct route that should be considered operational. The frontend airport search reads from its India-only airport constant and should be kept aligned.
 
-## Skyscanner Notes
+## Google Flights Notes
 
-`SkyscannerService` tries the no-key browse endpoint first and gracefully returns `None` on missing data or HTTP errors. The predictor then uses deterministic India-calibrated simulation, so the application works end to end without any external API key.
+`GoogleFlightsService` calls SerpAPI's `google_flights` engine (one-way, economy, `gl=in`, `currency=INR`). Set `FLIGHT_PRICE_PROVIDER=skyscanner` to use the legacy Skyscanner browse endpoint instead. When live fares are missing, the predictor uses India-calibrated ML simulation and the UI shows a toast.
 
 ## Phase 2 Roadmap
 

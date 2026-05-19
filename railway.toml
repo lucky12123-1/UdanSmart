@@ -1,0 +1,8 @@
+# Railway monorepo hints — create TWO services in the Railway dashboard.
+
+[build]
+builder = "DOCKERFILE"
+
+# Backend service: set Root Directory = backend, Dockerfile = Dockerfile
+# Frontend service: set Root Directory = frontend, Dockerfile = Dockerfile
+# Add Redis plugin and link REDIS_URL to the backend service.

@@ -54,7 +54,7 @@ def generate_calendar_data(
     raw_days = []
     prices = []
     for day in days:
-        stored = price_store.get_price(route, day.isoformat())
+        stored = price_store.get_live_price(route, day.isoformat())
         source = "stored" if stored is not None else "simulated"
         price = stored if stored is not None else predictor.predict_price(origin, dest, day, cabin, adults)
         prices.append(float(price))

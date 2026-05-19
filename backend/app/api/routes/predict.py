@@ -53,7 +53,7 @@ def _weekly_analysis_90d(origin: str, destination: str, cabin: str, adults: int)
 
     for offset in range(1, 91):
         day = today - timedelta(days=offset)
-        stored = price_store.get_price(route, day.isoformat())
+        stored = price_store.get_live_price(route, day.isoformat())
         price = stored if stored is not None else predictor.predict_price(origin, destination, day, cabin, adults)
         js_dow = (day.weekday() + 1) % 7
         buckets[js_dow].append(price)
@@ -107,7 +107,7 @@ def _trend(origin: str, destination: str, cabin: str, adults: int) -> list[dict]
     items = []
     for idx in range(90):
         day = today + timedelta(days=idx + 1)
-        stored = price_store.get_price(route, day.isoformat())
+        stored = price_store.get_live_price(route, day.isoformat())
         price = stored if stored is not None else predictor.predict_price(origin, destination, day, cabin, adults)
         features = generate_calendar_data(origin, destination, day, day, cabin, adults)["days"][0]
         items.append({

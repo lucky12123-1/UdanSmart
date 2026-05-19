@@ -1,4 +1,4 @@
-"""Daily top-route price fetch with alternating 90-day window batches."""
+"""Monthly week snapshot for top routes (25 × 7 = 175 SerpAPI calls per month)."""
 
 from __future__ import annotations
 
@@ -7,63 +7,88 @@ import json
 import logging
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
-from typing import Literal
 
 from app.core.config import settings
-from app.ml.features import TOP_30_ROUTES
-from app.services.flight_data import skyscanner_service
+from app.ml.features import TOP_25_ROUTES, TOP_30_ROUTES
+from app.services.flight_data import flight_price_service
 from app.services.price_store import price_store
 
 logger = logging.getLogger(__name__)
-
-FetchBatch = Literal["first_half", "second_half"]
-FORWARD_WINDOW_DAYS = 90
 
 
 @dataclass
 class FetchSummary:
     """Result of one scheduled or manual fetch run."""
 
-    batch: FetchBatch
+    schedule: str
     routes: int
+    week_days: int
     dates_requested: int
+    serpapi_calls: int
     stored: int
     missing: int
+    date_from: str
+    date_to: str
+    anchor_date: str
     started_at: str
     finished_at: str
 
     def to_dict(self) -> dict:
         return {
-            "batch": self.batch,
+            "schedule": self.schedule,
             "routes": self.routes,
+            "week_days": self.week_days,
             "dates_requested": self.dates_requested,
+            "serpapi_calls": self.serpapi_calls,
             "stored": self.stored,
             "missing": self.missing,
+            "date_from": self.date_from,
+            "date_to": self.date_to,
+            "anchor_date": self.anchor_date,
             "started_at": self.started_at,
             "finished_at": self.finished_at,
         }
 
 
-def day_offsets_for_today(window_days: int = FORWARD_WINDOW_DAYS) -> tuple[FetchBatch, list[int]]:
+def resolve_monthly_week_anchor(today: date | None = None) -> date:
     """
-    Alternate which half of the forward 90-day window is fetched each calendar day.
+    First day of the live-price week.
 
-    Even ordinal days: today .. today+44 (45 days).
-    Odd ordinal days: today+45 .. today+89 (45 days).
-    Over two days the full 90-day horizon is refreshed with half the API load per run.
+    - MONTHLY_FETCH_ANCHOR_DATE set → use that (e.g. 2026-06-01 for first week of June)
+    - Run on MONTHLY_FETCH_DAY (1st) → 1st of current month
+    - Otherwise (mid-month manual run) → 1st of next month (avoids wasting calls on dying days)
     """
 
-    half = window_days // 2
-    if date.today().toordinal() % 2 == 0:
-        return "first_half", list(range(half))
-    return "second_half", list(range(half, window_days))
+    if settings.monthly_fetch_anchor_date:
+        return date.fromisoformat(settings.monthly_fetch_anchor_date)
+
+    today = today or date.today()
+    if today.day == settings.monthly_fetch_day:
+        return today.replace(day=1)
+
+    if today.month == 12:
+        return date(today.year + 1, 1, 1)
+    return date(today.year, today.month + 1, 1)
 
 
-def travel_dates_for_offsets(offsets: list[int]) -> list[str]:
-    """Map day offsets from today into ISO date strings."""
+def active_fetch_routes() -> tuple[str, ...]:
+    """Return the configured top-N India domestic routes for monthly fetch."""
 
-    today = date.today()
-    return [(today + timedelta(days=offset)).isoformat() for offset in offsets]
+    pool = TOP_30_ROUTES
+    count = min(settings.monthly_fetch_route_count, len(pool))
+    return tuple(pool[:count])
+
+
+def week_travel_dates(
+    week_days: int | None = None,
+    *,
+    anchor: date | None = None,
+) -> list[str]:
+    """Return ISO dates for the live snapshot (anchor .. anchor+N-1)."""
+
+    start = anchor or resolve_monthly_week_anchor()
+    days = week_days if week_days is not None else settings.monthly_fetch_week_days
+    return [(start + timedelta(days=offset)).isoformat() for offset in range(days)]
 
 
 async def _fetch_one(route: str, day: str, semaphore: asyncio.Semaphore) -> bool:
@@ -71,40 +96,43 @@ async def _fetch_one(route: str, day: str, semaphore: asyncio.Semaphore) -> bool
 
     origin, destination = route.split("-", 1)
     async with semaphore:
-        quote = await skyscanner_service.fetch_route_price(origin, destination, day)
-        await asyncio.sleep(0.25)
+        quote = await flight_price_service.fetch_route_price(origin, destination, day)
+        await asyncio.sleep(settings.flight_fetch_delay_seconds)
     if not quote:
         return False
-    price_store.store_price(route, day, float(quote["price"]), quote.get("source", "skyscanner"))
+    price_store.store_price(route, day, float(quote["price"]), quote.get("source", "google_flights"))
     return True
 
 
-async def run_daily_price_fetch(
+async def run_monthly_week_price_fetch(
     routes: tuple[str, ...] | None = None,
     *,
-    window_days: int = FORWARD_WINDOW_DAYS,
+    week_days: int | None = None,
+    anchor: date | None = None,
 ) -> FetchSummary:
     """
-    Fetch live fares for top routes and store them in Redis (90-day TTL per key).
+    Fetch live Google Flights fares for top routes over the first week of the target month.
 
-    Uses an alternating half-window strategy so each run requests ~30 routes × 45 days.
+    Default ~175 SerpAPI calls (25 routes × 7 days). Other travel dates use ML prediction.
     """
 
-    active_routes = tuple(r for r in (routes or TOP_30_ROUTES) if r)
-    batch, offsets = day_offsets_for_today(window_days)
-    days = travel_dates_for_offsets(offsets)
+    active_routes = tuple(r for r in (routes or active_fetch_routes()) if r)
+    anchor_day = anchor or resolve_monthly_week_anchor()
+    days = week_travel_dates(week_days, anchor=anchor_day)
     started = datetime.utcnow().isoformat()
     stored = 0
     missing = 0
     semaphore = asyncio.Semaphore(4)
+    serpapi_calls = len(active_routes) * len(days)
 
     logger.info(
-        "Starting %s fetch: %s routes × %s days (offsets %s..%s)",
-        batch,
+        "Starting monthly week fetch: %s routes × %s days = %s SerpAPI calls (anchor %s, %s .. %s)",
         len(active_routes),
         len(days),
-        offsets[0] if offsets else "-",
-        offsets[-1] if offsets else "-",
+        serpapi_calls,
+        anchor_day.isoformat(),
+        days[0] if days else "-",
+        days[-1] if days else "-",
     )
 
     for route in active_routes:
@@ -125,22 +153,26 @@ async def run_daily_price_fetch(
 
     finished = datetime.utcnow().isoformat()
     summary = FetchSummary(
-        batch=batch,
+        schedule="monthly_week",
         routes=len(active_routes),
+        week_days=len(days),
         dates_requested=len(days),
+        serpapi_calls=serpapi_calls,
         stored=stored,
         missing=missing,
+        date_from=days[0] if days else "",
+        date_to=days[-1] if days else "",
+        anchor_date=anchor_day.isoformat(),
         started_at=started,
         finished_at=finished,
     )
     price_store.save_fetch_metadata(summary.to_dict())
     _write_status_file(summary)
     logger.info(
-        "Fetch complete (%s): stored=%s missing=%s routes=%s",
-        batch,
+        "Monthly week fetch complete: stored=%s missing=%s serpapi_calls=%s",
         stored,
         missing,
-        len(active_routes),
+        serpapi_calls,
     )
     return summary
 
@@ -153,7 +185,11 @@ def _write_status_file(summary: FetchSummary) -> None:
     path.write_text(json.dumps(summary.to_dict(), indent=2), encoding="utf-8")
 
 
-def run_daily_price_fetch_sync() -> FetchSummary:
+def run_monthly_week_price_fetch_sync() -> FetchSummary:
     """Synchronous entrypoint for APScheduler and CLI scripts."""
 
-    return asyncio.run(run_daily_price_fetch())
+    return asyncio.run(run_monthly_week_price_fetch())
+
+
+run_daily_price_fetch = run_monthly_week_price_fetch
+run_daily_price_fetch_sync = run_monthly_week_price_fetch_sync

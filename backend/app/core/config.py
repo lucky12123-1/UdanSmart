@@ -14,7 +14,25 @@ except ImportError:
         return False
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
-load_dotenv(ROOT_DIR / ".env")
+
+
+def _load_env_file() -> None:
+    """Load .env without overriding non-empty variables (Docker sets REDIS_URL etc.)."""
+
+    env_path = ROOT_DIR / ".env"
+    if not env_path.exists():
+        return
+    try:
+        from dotenv import dotenv_values
+    except ImportError:
+        load_dotenv(env_path)
+        return
+    for key, value in dotenv_values(env_path).items():
+        if value is not None and not os.getenv(key):
+            os.environ[key] = value
+
+
+_load_env_file()
 
 
 @dataclass(frozen=True)
@@ -26,12 +44,22 @@ class Settings:
     redis_url: str = os.getenv("REDIS_URL", "redis://localhost:6379")
     model_path: str = os.getenv("MODEL_PATH", "models/lgbm_model.pkl")
     skyscanner_rapidapi_key: str = os.getenv("SKYSCANNER_RAPIDAPI_KEY", "")
+    serpapi_api_key: str = os.getenv("SERPAPI_API_KEY", "")
+    flight_price_provider: str = os.getenv("FLIGHT_PRICE_PROVIDER", "auto")
+    google_flights_currency: str = os.getenv("GOOGLE_FLIGHTS_CURRENCY", "INR")
+    google_flights_gl: str = os.getenv("GOOGLE_FLIGHTS_GL", "in")
+    google_flights_hl: str = os.getenv("GOOGLE_FLIGHTS_HL", "en")
+    serpapi_timeout_seconds: float = float(os.getenv("SERPAPI_TIMEOUT_SECONDS", "45"))
+    flight_fetch_delay_seconds: float = float(os.getenv("FLIGHT_FETCH_DELAY_SECONDS", "1.0"))
     price_store_ttl_days: int = int(os.getenv("PRICE_STORE_TTL_DAYS", "90"))
     festive_archive_path: str = os.getenv(
         "FESTIVE_ARCHIVE_PATH", "data/festive_prices_archive.json"
     )
     cache_ttl_seconds: int = int(os.getenv("CACHE_TTL_SECONDS", "21600"))
-    daily_fetch_cron: str = os.getenv("DAILY_FETCH_CRON", "30 19 * * *")
+    monthly_fetch_day: int = int(os.getenv("MONTHLY_FETCH_DAY", "1"))
+    monthly_fetch_week_days: int = int(os.getenv("MONTHLY_FETCH_WEEK_DAYS", "7"))
+    monthly_fetch_route_count: int = int(os.getenv("MONTHLY_FETCH_ROUTE_COUNT", "25"))
+    monthly_fetch_anchor_date: str = os.getenv("MONTHLY_FETCH_ANCHOR_DATE", "")
     api_prefix: str = "/api"
     model_version: str = "india-domestic-v1.0"
 

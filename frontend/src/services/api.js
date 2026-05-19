@@ -1,11 +1,26 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+/**
+ * Browser must call a public URL (localhost or Railway), never Docker service names.
+ * Empty baseURL → Vite dev proxy `/api` → localhost:8000.
+ */
+function resolveApiBaseUrl() {
+  const configured = import.meta.env.VITE_API_BASE_URL?.trim();
+  if (!configured) {
+    return '';
+  }
+  if (configured.includes('backend:') || configured.includes('backend/')) {
+    return 'http://localhost:8000';
+  }
+  return configured.replace(/\/$/, '');
+}
+
+export const API_BASE_URL = resolveApiBaseUrl();
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 20000,
-  headers: { 'Content-Type': 'application/json' }
+  timeout: 60000,
+  headers: { 'Content-Type': 'application/json' },
 });
 
 export async function predictPrices(payload) {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { predictPrices } from '../services/api';
+import { formatApiError } from '../utils/apiError';
 
 export function usePrediction() {
   const [data, setData] = useState(null);
@@ -11,7 +12,6 @@ export function usePrediction() {
   async function predict(payload) {
     setLoading(true);
     setError(null);
-    setData(null);
     try {
       const result = await predictPrices(payload);
       setData(result);
@@ -21,8 +21,9 @@ export function usePrediction() {
       }
       return result;
     } catch (err) {
-      const message = err.response?.data?.detail?.[0]?.msg || 'Could not fetch prices. Showing predicted prices instead.';
+      const message = formatApiError(err);
       setError(message);
+      setData(null);
       toast.error(message);
       throw err;
     } finally {

@@ -17,6 +17,8 @@ services:
     build:
       context: ./backend
     restart: unless-stopped
+    env_file:
+      - ./backend/.env
     environment:
       APP_NAME: SkyPredict India
       DEBUG: "False"
@@ -24,7 +26,7 @@ services:
       MODEL_PATH: models/lgbm_model.pkl
       PRICE_STORE_TTL_DAYS: "90"
       CACHE_TTL_SECONDS: "21600"
-      DAILY_FETCH_CRON: "30 19 * * *"
+      FLIGHT_PRICE_PROVIDER: google_flights
       ALLOWED_ORIGINS: '["http://localhost:5173","http://127.0.0.1:5173"]'
     ports:
       - "8000:8000"
@@ -40,7 +42,8 @@ services:
     restart: unless-stopped
     command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
     environment:
-      VITE_API_BASE_URL: http://backend:8000
+      # Browser runs on host — use localhost (not Docker service name "backend")
+      VITE_API_BASE_URL: http://localhost:8000
     ports:
       - "5173:5173"
     depends_on:

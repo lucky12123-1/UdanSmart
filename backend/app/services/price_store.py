@@ -14,7 +14,7 @@ FETCH_META_KEY = "fetch:meta:last_run"
 
 
 class PriceStore:
-    """Manage stored Skyscanner prices with a Redis TTL-based rolling window."""
+    """Manage stored live flight prices with a Redis TTL-based rolling window."""
 
     def __init__(self) -> None:
         self.redis = get_redis()
@@ -24,7 +24,7 @@ class PriceStore:
     def _date_score(day: str) -> int:
         return int(day.replace("-", ""))
 
-    def store_price(self, route_key: str, date: str, price: float, source: str = "skyscanner") -> None:
+    def store_price(self, route_key: str, date: str, price: float, source: str = "google_flights") -> None:
         """Store one route-date price with a 90-day TTL and sorted-set index."""
 
         key = f"prices:{route_key}:{date}"
@@ -41,6 +41,27 @@ class PriceStore:
 
         self.redis.set(f"no_flights:{route_key}", "true", ex=SECONDS_PER_DAY)
 
+    def get_live_window(self) -> tuple[str, str] | None:
+        """Return (date_from, date_to) for the current monthly live snapshot, if set."""
+
+        meta = self.get_fetch_metadata() or {}
+        if meta.get("schedule") != "monthly_week":
+            return None
+        start = meta.get("date_from")
+        end = meta.get("date_to")
+        if start and end:
+            return str(start), str(end)
+        return None
+
+    def is_live_price_date(self, travel_date: str) -> bool:
+        """True when a stored fare should be used instead of ML for this travel date."""
+
+        window = self.get_live_window()
+        if not window:
+            return True
+        start, end = window
+        return start <= travel_date <= end
+
     def get_price(self, route_key: str, date: str) -> float | None:
         """Return a stored price for a route-date pair, if available."""
 
@@ -48,6 +69,13 @@ class PriceStore:
         if not raw:
             return None
         return float(json.loads(raw)["price"])
+
+    def get_live_price(self, route_key: str, date: str) -> float | None:
+        """Return stored price only when it falls in the active monthly week window."""
+
+        if not self.is_live_price_date(date):
+            return None
+        return self.get_price(route_key, date)
 
     def get_price_entry(self, route_key: str, date: str) -> dict | None:
         """Return the full stored price entry, if available."""
@@ -67,7 +95,7 @@ class PriceStore:
         for member in members:
             entry = self.get_price_entry(route_key, member)
             if entry:
-                history.append({"date": member, "price": float(entry["price"]), "source": entry.get("source", "skyscanner")})
+                history.append({"date": member, "price": float(entry["price"]), "source": entry.get("source", "google_flights")})
         return sorted(history, key=lambda item: item["date"])
 
     def get_route_average(self, route_key: str, days: int = 30) -> float | None:
